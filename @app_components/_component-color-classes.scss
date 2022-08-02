@@ -1,0 +1,141 @@
+@import '../@app_settings/settings';
+@import '../@app_functions/function_colorPalette';
+@import '../@app_functions/function_colorContrast';
+// Color Pallete
+@each $colorName, $colorValue in $theme_color_palette {
+    @each $colorShadeName, $colorShadeValue in $theme_shades_light {
+        .color-#{$colorName}-#{$colorShadeName},
+        .color-hover-#{$colorName}-#{$colorShadeName}:hover {
+            color: #{contrastColorCheck(palette($colorValue, +$colorShadeValue))}!important;
+            background-color: #{palette($colorValue, +$colorShadeValue)}!important;
+        };
+        .text-#{$colorName}-#{$colorShadeName},
+        .text-hover-#{$colorName}-#{$colorShadeName}:hover {
+           color: #{palette($colorValue, +$colorShadeValue)}!important;
+        };
+        .border-#{$colorName}-#{$colorShadeName},
+        .border-hover-#{$colorName}-#{$colorShadeName}:hover {
+           border-color: #{palette($colorValue, +$colorShadeValue)}!important;
+         };
+    }
+    .color-#{$colorName},
+    .color-hover-#{$colorName}:hover {
+        color: #{contrastColorCheck($colorValue)}!important;
+        background-color: $colorValue!important;
+    };
+    .text-#{$colorName},
+    .text-hover-#{$colorName}:hover {
+        color: $colorValue !important;
+    };
+    .border-#{$colorName},
+    .border-hover-#{$colorName}:hover {
+       border-color: $colorValue !important;
+     };
+    @each $colorShadeName, $colorShadeValue in $theme_shades_dark {
+        .color-#{$colorName}-#{$colorShadeName},
+        .color-hover-#{$colorName}-#{$colorShadeName}:hover {
+            color:#{contrastColorCheck(palette($colorValue, -$colorShadeValue))}!important;
+            background-color: #{palette($colorValue, -$colorShadeValue)}!important;
+        };
+        .text-#{$colorName}-#{$colorShadeName},
+        .text-hover-#{$colorName}-#{$colorShadeName}:hover {
+           color: #{palette($colorValue, +$colorShadeValue)}!important;
+        };
+        .border-#{$colorName}-#{$colorShadeName},
+        .border-hover-#{$colorName}-#{$colorShadeName}:hover {
+           border-color: #{palette($colorValue, +$colorShadeValue)}!important;
+         };
+    }
+  }
+// Neutral Colors
+@each $colorName, $colorValue in $theme_color_neutral {
+    @each $colorShadeName, $colorShadeValue in $theme_shades_light {
+        .color-#{$colorName}-#{$colorShadeName},
+        .color-hover-#{$colorName}-#{$colorShadeName}:hover {
+            color: #{contrastColorCheck(palette($colorValue, +$colorShadeValue))}!important;
+            background-color: #{palette($colorValue, +$colorShadeValue)}!important;
+        };
+        .text-#{$colorName}-#{$colorShadeName},
+        .text-hover-#{$colorName}-#{$colorShadeName}:hover {
+           color: #{palette($colorValue, +$colorShadeValue)}!important;
+        };
+        .border-#{$colorName}-#{$colorShadeName},
+        .border-hover-#{$colorName}-#{$colorShadeName}:hover {
+           border-color: #{palette($colorValue, +$colorShadeValue)}!important;
+         };
+    }
+    .color-#{$colorName},
+    .color-hover-#{$colorName}:hover {
+        color: #{contrastColorCheck($colorValue)}!important;
+        background-color: $colorValue!important;
+    };
+    .text-#{$colorName},
+    .text-hover-#{$colorName}:hover {
+        color: $colorValue !important;
+    };
+    .border-#{$colorName},
+    .border-hover-#{$colorName}:hover {
+       border-color: $colorValue !important;
+     };
+    @each $colorShadeName, $colorShadeValue in $theme_shades_dark {
+        .color-#{$colorName}-#{$colorShadeName},
+        .color-hover-#{$colorName}-#{$colorShadeName}:hover {
+            color:#{contrastColorCheck(palette($colorValue, -$colorShadeValue))}!important;
+            background-color: #{palette($colorValue, -$colorShadeValue)}!important;
+        };
+        .text-#{$colorName}-#{$colorShadeName},
+        .text-hover-#{$colorName}-#{$colorShadeName}:hover {
+           color: #{palette($colorValue, +$colorShadeValue)}!important;
+        };
+        .border-#{$colorName}-#{$colorShadeName},
+        .border-hover-#{$colorName}-#{$colorShadeName}:hover {
+           border-color: #{palette($colorValue, +$colorShadeValue)}!important;
+         };
+    }
+  }
+// Semantics Colors
+@each $colorName, $colorValue in $theme_color_semantic {
+    @each $colorShadeName, $colorShadeValue in $theme_shades_light {
+        .color-#{$colorName}-#{$colorShadeName},
+        .color-hover-#{$colorName}-#{$colorShadeName}:hover {
+            color: #{contrastColorCheck(palette($colorValue, +$colorShadeValue))}!important;
+            background-color: #{palette($colorValue, +$colorShadeValue)}!important;
+        };
+        .text-#{$colorName}-#{$colorShadeName},
+        .text-hover-#{$colorName}-#{$colorShadeName}:hover {
+           color: #{palette($colorValue, +$colorShadeValue)}!important;
+        };
+        .border-#{$colorName}-#{$colorShadeName},
+        .border-hover-#{$colorName}-#{$colorShadeName}:hover {
+           border-color: #{palette($colorValue, +$colorShadeValue)}!important;
+         };
+    }
+    .color-#{$colorName},
+    .color-hover-#{$colorName}:hover {
+        color: #{contrastColorCheck($colorValue)}!important;
+        background-color: $colorValue!important;
+    };
+    .text-#{$colorName},
+    .text-hover-#{$colorName}:hover {
+        color: $colorValue !important;
+    };
+    .border-#{$colorName},
+    .border-hover-#{$colorName}:hover {
+       border-color: $colorValue !important;
+     };
+    @each $colorShadeName, $colorShadeValue in $theme_shades_dark {
+        .color-#{$colorName}-#{$colorShadeName},
+        .color-hover-#{$colorName}-#{$colorShadeName}:hover {
+            color:#{contrastColorCheck(palette($colorValue, -$colorShadeValue))}!important;
+            background-color: #{palette($colorValue, -$colorShadeValue)}!important;
+        };
+        .text-#{$colorName}-#{$colorShadeName},
+        .text-hover-#{$colorName}-#{$colorShadeName}:hover {
+           color: #{palette($colorValue, +$colorShadeValue)}!important;
+        };
+        .border-#{$colorName}-#{$colorShadeName},
+        .border-hover-#{$colorName}-#{$colorShadeName}:hover {
+           border-color: #{palette($colorValue, +$colorShadeValue)}!important;
+         };
+    }
+  }
