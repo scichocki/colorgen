@@ -1,0 +1,12 @@
+// Colors Settings - primary, secondary, tertiary, quaternary, quinary etc...
+$theme_color_palette: ("primary": #64008F,"secondary":#008f00);
+// Main settings for Website Neutral Colors
+$theme_color_neutral: ("neutral": #484848); //#808080
+$theme_color_neutral_black: ("#000000");  // DON'T CHANGE THIS PARAMETR
+$theme_color_neutral_white: ("#ffffff"); // DON'T CHANGE THIS PARAMETR
+$theme_color_neutral_transparent: ("rgba(255, 255, 255, 0)"); // DON'T CHANGE THIS PARAMETR
+// Main settings for App Alerts Colors
+$theme_color_semantic: ("danger": #CC0000,"warning": #FF8800,"success": #007E33,"info": #0099CC);
+// Theme Shades
+$theme_shades_light: ("10": 90%,"20": 80%,"30": 70%,"40": 60%,"50": 50%,"60": 40%,"70": 30%,"80": 20%,"90": 10%,"95": 5%,);
+$theme_shades_dark:("105": 5%,"100": 10%,"200": 20%,"300": 30%,"400": 40%,"500": 50%,"600": 60%,"700": 70%,"800": 80%,"900": 90%);
