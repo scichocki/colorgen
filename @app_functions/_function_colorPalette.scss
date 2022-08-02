@@ -1,0 +1,4 @@
+@function palette($paletteColor, $paletteColorValue) {
+    $convertedPalette: (scale-color($paletteColor, $lightness: $paletteColorValue));
+    @return $convertedPalette;
+}
