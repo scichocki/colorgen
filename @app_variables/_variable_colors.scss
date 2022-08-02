@@ -1,0 +1,34 @@
+@import '../@app_settings/settings';
+@import '../@app_functions/function_colorPalette';
+:root {
+  @each $colorName, $colorValue in $theme_color_palette {
+    @each $colorShadeName, $colorShadeValue in $theme_shades_light {
+      --color-#{$colorName}-#{$colorShadeName}: #{palette($colorValue, +$colorShadeValue)};
+    }
+      --color-#{$colorName}: #{$colorValue};
+    @each $colorShadeName, $colorShadeValue in $theme_shades_dark {
+      --color-#{$colorName}-#{$colorShadeName}: #{palette($colorValue, -$colorShadeValue)};
+    }
+  }
+  @each $colorName, $colorValue in $theme_color_neutral {
+      --color-neutral-white: #{$theme_color_neutral_white};
+    @each $colorShadeName, $colorShadeValue in $theme_shades_light {
+      --color-#{$colorName}-#{$colorShadeName}: #{palette($colorValue, +$colorShadeValue)};
+    }
+      --color-#{$colorName}: #{$colorValue};
+    @each $colorShadeName, $colorShadeValue in $theme_shades_dark {
+      --color-#{$colorName}-#{$colorShadeName}: #{palette($colorValue, -$colorShadeValue)};
+    }
+      --color-neutral-black: #{$theme_color_neutral_black};
+      --color-neutral-transparent: #{$theme_color_neutral_transparent}; 
+  }
+  @each $colorName, $colorValue in $theme_color_semantic {
+    @each $colorShadeName, $colorShadeValue in $theme_shades_light {
+      --color-#{$colorName}-#{$colorShadeName}: #{palette($colorValue, +$colorShadeValue)};
+    }
+      --color-#{$colorName}: #{$colorValue};
+    @each $colorShadeName, $colorShadeValue in $theme_shades_dark {
+      --color-#{$colorName}-#{$colorShadeName}: #{palette($colorValue, -$colorShadeValue)};
+    }
+  }
+}
