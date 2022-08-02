@@ -1,0 +1,11 @@
+@function contrastColorCheck($toCheckColorContrastValue) {
+    $resultColorContrast:"";
+    $invertedColorContrast: invert($toCheckColorContrastValue);
+    $lightnessCheck: lightness($invertedColorContrast);
+    @if ($lightnessCheck < 49.9) {
+        $resultColorContrast: #000000;
+    } @else {
+        $resultColorContrast: #ffffff;
+    }
+    @return $resultColorContrast;
+}
