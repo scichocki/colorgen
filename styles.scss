@@ -1,0 +1,7 @@
+@charset "UTF-8";
+// Importing Settings > Main File
+@import '@app_settings/settings';
+// Importing Variable > Colors to :ROOT
+@import '@app_variables/variable_colors';
+// Importing Component > Color Classes
+@import '@app_components/component-color-classes';
